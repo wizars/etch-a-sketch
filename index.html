@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch-A-Sketch</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="icon.svg" type="image/x-icon">
+  <body>
+
+    <div id="header">
+      Grid size:
+      <input type="number" name="gridWidth" id="gridWidth" value="3" max="64" min="3" />
+      X
+      <input type="number" name="gridHeight" id="gridHeight" value="3" max="64" min="3" />
+      <button id="btn_generate">Create Grid</button>
+
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <span style="vertical-align: baseline;">
+          Rainbow Mode
+        </span> 
+    </div>
+
+    <div id="grid"     >
+         <!-- This is where the grid will be created in run time -->
+    </div>
+    
+  </body>
+  <script src="dibuja.js"></script>
+</html>
