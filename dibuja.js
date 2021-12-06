@@ -10,6 +10,9 @@ let btn_generate = document.getElementById("btn_generate");
 let gridWidthInput = document.getElementById("gridWidth");
 let gridHeightInput = document.getElementById("gridHeight");
 
+// Get rainbow mode checkbox object
+let rainbow = document.getElementById("rainbow");
+
 // Event listener for generate grid button
 btn_generate.addEventListener("click", creatGrid);
 
@@ -93,7 +96,16 @@ function creatGrid() {
 
 }
 function changeBoxColor(){
-    this.style.backgroundColor="black"
+    if (rainbow.checked===true)
+    {
+        this.style.backgroundColor="red"
+
+    }
+    else{
+
+        this.style.backgroundColor="black"
+    }
+
 }
 
 // Changes the generate grid button color when the input size changes
