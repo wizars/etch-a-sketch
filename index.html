@@ -7,29 +7,85 @@
     <title>Etch-A-Sketch</title>
   </head>
   <link rel="stylesheet" href="style.css" />
-  <link rel="shortcut icon" href="icon.svg" type="image/x-icon">
+  <link rel="shortcut icon" href="icon.svg" type="image/x-icon" />
   <body>
+    <div id="main">
+      <div id="controls">
+        <!-- Inputs container -->
+        <div id="input_container">
+          Grid size:
+          <div>
+            <input type="number" name="gridWidth" id="gridWidth" value="" max="64" min="9" />
+            X
+            <input type="number" name="gridHeight" id="gridHeight" value="" max="64" min="9" />
+          </div>
+          <button id="btn_generate" class="btn">Create Grid</button>
+        </div>
 
-    <div id="header">
-      Grid size:
-      <input type="number" name="gridWidth" id="gridWidth" value="3" max="64" min="3" />
-      X
-      <input type="number" name="gridHeight" id="gridHeight" value="3" max="64" min="3" />
-      <button id="btn_generate">Create Grid</button>
+        <!-- Inputs container -->
+        <div id="modes_container">
+          <p>Modes:</p>
 
-        <label class="switch">
-          <input type="checkbox" id="rainbow">
-          <span class="slider round"></span>
-        </label>
-        <span style="vertical-align: baseline;">
-          Rainbow Mode
-        </span> 
+          <!-- Normal checkbox -->
+          <div class="checkbox_container">
+            <label class="switch">
+              <input type="radio" id="normal" value="normal" name="mode" checked />
+              <span class="slider round"></span>
+            </label>
+            <span style="vertical-align: baseline"> Normal </span>
+          </div>
+
+          <!-- Rainbow checkbox -->
+          <div class="checkbox_container">
+            <label class="switch">
+              <input type="radio" id="rainbow" value="rainbow" name="mode" />
+              <span class="slider round"></span>
+            </label>
+            <span style="vertical-align: baseline"> Rainbow </span>
+          </div>
+
+          <!-- Gradual checkbox -->
+          <div class="checkbox_container">
+            <label class="switch">
+              <input type="radio" id="gradual" value="gradual" name="mode" />
+              <span class="slider round"></span>
+            </label>
+            <span style="vertical-align: baseline"> Gradual </span>
+          </div>
+          <!-- Erase checkbox -->
+          <div class="checkbox_container">
+            <label class="switch">
+              <input type="radio" id="erase" value="erase" name="mode" />
+              <span class="slider round red"></span>
+            </label>
+            <span style="vertical-align: baseline"> Erase </span>
+          </div>
+        </div>
+
+        <!-- Clear_container -->
+        <div id="clear_container">
+          <button id="btn_clear" class="btn">CLEAR</button>
+        </div>
+        <!-- CAT PICTURE -->
+        <button hidden id="btn_load" class="btn">
+          <canvas  id="mycanvas" width="24" height="24"></canvas>
+          Miauu!</button>
+      </div>
+      
+      <!-- Drawing Grid -->
+      <div id="grid">
+        <!-- This is where the grid will be created in run time -->
+      </div>
     </div>
 
-    <div id="grid"     >
-         <!-- This is where the grid will be created in run time -->
-    </div>
     
+
+    
+</div>
+
+
+
+
   </body>
   <script src="dibuja.js"></script>
 </html>
